@@ -4,6 +4,8 @@ spring:
   cloud:
       config:
           uri: http://localhost:8888
+          profile: @profiles.active@
+          name: cloud-config
 
 eureka:
   instance:

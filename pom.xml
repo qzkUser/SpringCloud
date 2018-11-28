@@ -17,7 +17,6 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
 		<cloudE-mapper-version>1.0.0</cloudE-mapper-version>
 		<cloudE-common-version>1.0.0</cloudE-common-version>
 		<cloudE-pay-api-version>1.0.0</cloudE-pay-api-version>
@@ -87,6 +86,45 @@
 		</dependencies>
 	</dependencyManagement>
 
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <profiles.active>local</profiles.active>
+            </properties>
+            <!--<build>
+                <filters>
+                    <filter>src/main/resources/config/application-qa.properties</filter>
+                </filters>
+            </build>-->
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profiles.active>dev</profiles.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!--<build>
+                <filters>
+                    <filter>src/main/resources/config/application-dev.properties</filter>
+                </filters>
+            </build>-->
+        </profile>
+        <profile>
+            <id>pro</id>
+            <properties>
+                <profiles.active>pro</profiles.active>
+            </properties>
+            <!--<build>
+                <filters>
+                    <filter>src/main/resources/config/application-pro.properties</filter>
+                </filters>
+            </build>-->
+        </profile>
+    </profiles>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -112,6 +150,19 @@
 			</plugin>
 		</plugins>
 		<defaultGoal>compile</defaultGoal>
+        <!--<filters>
+            <filter>src/main/resources/config/application.properties</filter>
+        </filters>-->
+        <resources>
+            <resource>
+                <directory>src/main/resources/config</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                </includes>
+                 <filtering>true</filtering> <!--是否使用过滤器-->
+             </resource>
+        </resources>
 	</build>
+
 
 </project>

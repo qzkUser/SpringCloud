@@ -42,7 +42,7 @@
         <!-- <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" /> -->
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://host:3306/db"
+                        connectionURL="jdbc:mysql://host:3306/test"
                         userId="userId"
                         password="password">
         </jdbcConnection>

@@ -7,11 +7,16 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
+      profile: @profiles.active@
+      name: cloud-config
 
-mybatis:
-  mapperLocations: classpath:mapper/*.xml
-  typeAliasesPackage: com.cloudE.mapper
+#mybatis:
+#  mapperLocations: classpath:mapper/*.xml
+#  typeAliasesPackage: com.cloudE.mapper
 
 eureka:
   instance:
     prefer-ip-address: true
+
+ucTask:
+  dynamicParameter: 1
