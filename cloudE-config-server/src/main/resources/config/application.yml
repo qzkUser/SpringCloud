@@ -14,6 +14,7 @@ spring:
         profile: @profiles.active@
         name: cloud-config
 
+
 #使用本地属性文件
 #属性文件地址，只要指定文件夹的路径
 #spring:
