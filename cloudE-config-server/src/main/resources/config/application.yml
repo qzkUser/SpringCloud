@@ -1,29 +1,31 @@
 server:
   port: 8888
 
-#spring:
-#  application:
-#    name: cloudE-config-server
-#  cloud:
-#      config:
-#        server:
-#          git:
-#            uri: https://github.com/vangao1989/cloudE.git
-#            searchPaths: cloudE-config-repo
-#            lable: master
+spring:
+  application:
+    name: cloud-config
+  cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/qzkUser/cloud-config.git
+            searchPaths: demo-Config
+            lable: master
+        profile: @profiles.active@
+        name: cloud-config
 
 #使用本地属性文件
 #属性文件地址，只要指定文件夹的路径
-spring:
-  application:
-    name: cloudE-config-server
-  profiles:
-    active: native
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: classpath:/properties/
+#spring:
+#  application:
+#    name: cloudE-config-server
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/properties/
 
 
 eureka:
