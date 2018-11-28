@@ -1,3 +1,5 @@
+clone https://github.com/vangao1989/cloudE.git 在项目基础上自己修改了些东西，用于验证一些自己的想法
+
 ## 项目介绍
 
 　　基于spring cloud的分布式系统架构。提供整套的微服务组件，包括服务发现、服务治理、链路追踪、服务监控等。所有服务均支持在docker中运行。
